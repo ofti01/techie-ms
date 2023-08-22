@@ -1,0 +1,15 @@
+GET http://localhost:8082/api/product
+Accept: application/json
+
+###
+POST http://localhost:8082/api/product
+Content-Type: application/json
+
+{
+  "name": "lok",
+  "description": "uiii",
+  "price": 100
+}
+
+###
+
