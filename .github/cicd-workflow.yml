@@ -29,7 +29,7 @@ jobs:
         cache: maven
     - name: Build with Maven discovery-service
       run: mvn clean install --file discovery-service/pom.xml
-    - name: Build with Maven inventory-sevice
+    - name: Build with Maven inventory-service
       run: mvn clean install --file inventory-sevice/pom.xml
     - name: Build with Maven order-service
       run: mvn clean install --file order-service/pom.xml
