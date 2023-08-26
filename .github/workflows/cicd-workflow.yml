@@ -36,8 +36,8 @@ jobs:
     - name: Build with Maven product-service
       run: mvn clean install --file product-service/pom.xml
 
+    - uses: actions/checkout@v2
     - name: login docker
-      uses: actions/checkout@v2
       env:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
