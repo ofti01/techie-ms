@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   discovery-service:
-    image: lotfi07/discovery-service:latest
+    image: discovery-service
     container_name: discovery-service
     ports:
       - "8761:8761"
@@ -9,21 +9,21 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
   product-service:
     container_name: product-service
-    image: lotfi07/product-service:latest
+    image: product-service
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - discovery-service
   inventory-service:
     container_name: inventory-service
-    image: lotfi07/inventory-service:latest
+    image: inventory-service
     environment:
         - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - discovery-service
   order-service:
     container_name: order-service
-    image: lotfi07/order-service:latest
+    image: order-service
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
