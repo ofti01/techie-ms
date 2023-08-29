@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   discovery-service:
-    image: ofti07/discovery-service:latest
+    image: lotfi-ms/discovery-service:latest
     container_name: discovery-service
     ports:
       - "8761:8761"
