@@ -49,7 +49,7 @@ jobs:
 
     - name: Push to Docker Hub Container Registry
       run: |
-        docker push lotfi07/lotfi-ms/discovery-service:latest
-        docker push lotfi07/lotfi-ms/inventory-sevice:latest
-        docker push lotfi07/lotfi-ms/order-service:latest
-        docker push lotfi07/lotfi-ms/product-service:latest
+        docker push lotfi-ms/discovery-service:latest
+        docker push lotfi-ms/inventory-sevice:latest
+        docker push lotfi-ms/order-service:latest
+        docker push lotfi-ms/product-service:latest
