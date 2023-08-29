@@ -1,9 +1,7 @@
 version: '3.9'
 services:
   discovery-service:
-    build:
-      context: .
-      dockerfile: discovery-service/Dockerfile
+    build: discovery-service
     image: discovery-service
     container_name: discovery-service
     ports:
@@ -11,9 +9,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=docker
   product-service:
-    build:
-      context: .
-      dockerfile: product-service/Dockerfile
+    build: product-service
     container_name: product-service
     image: product-service
     environment:
@@ -21,9 +17,7 @@ services:
     depends_on:
       - discovery-service
   inventory-service:
-    build:
-      context: .
-      dockerfile: inventory-sevice/Dockerfile
+    build: inventory-sevice
     container_name: inventory-service
     image: inventory-service
     environment:
@@ -31,9 +25,7 @@ services:
     depends_on:
       - discovery-service
   order-service:
-    build:
-      context: .
-      dockerfile: order-service/Dockerfile
+    build: order-service
     container_name: order-service
     image: order-service
     environment:
