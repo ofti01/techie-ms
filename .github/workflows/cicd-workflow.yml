@@ -49,7 +49,7 @@ jobs:
 
     - name: Push to Docker Hub Container Registry
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/discovery-service:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/inventory-sevice:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/order-service:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/product-service:latest
+        docker push lotfi-ms/discovery-service:latest
+        docker push lotfi-ms/inventory-sevice:latest
+        docker push lotfi-ms/order-service:latest
+        docker push lotfi-ms/product-service:latest
