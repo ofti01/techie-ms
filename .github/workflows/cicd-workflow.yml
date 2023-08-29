@@ -49,7 +49,6 @@ jobs:
 
     - name: Push to Docker Hub Container Registry
       run: |
-        docker push discovery-service:latest
-        docker push inventory-sevice:latest
-        docker push order-service:latest
-        docker push product-service:latest
+        docker tag discovery-service:latest lotfi07/discovery-service:latest
+        docker push ${{secrets.DOCKER_USER}}/discovery-service:latest
+
