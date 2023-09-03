@@ -47,8 +47,7 @@ jobs:
       id: build-image
       run: |
           echo ---Building images and starting up docker---
-          {{docker build [image-url] or docker-compose -f \
-          [docker-compose file] up -d }}
+          docker compose up -d
           echo ---Containers up—
 
     - name: Push to Docker Hub Container Registry
