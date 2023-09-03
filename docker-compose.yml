@@ -68,3 +68,5 @@ services:
       - MYSQL_DATABASE=inventory-service
     volumes:
       - ./inventory-order:/data/mysql
+networks:
+  mynet:
