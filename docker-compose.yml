@@ -10,6 +10,8 @@ services:
       - "8761:8761"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - mynet
   product-service:
     build:
       context: ./product-service
@@ -19,6 +21,8 @@ services:
     image: product-service:latest
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - mynet
     depends_on:
       - discovery-service
   inventory-service:
@@ -29,6 +33,8 @@ services:
     image: inventory-service:latest
     environment:
         - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - mynet
     depends_on:
       - discovery-service
   order-service:
@@ -39,6 +45,8 @@ services:
     image: order-service:latest
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - mynet
     depends_on:
       - discovery-service
   mongodb:
