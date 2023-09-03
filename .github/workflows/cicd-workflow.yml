@@ -44,7 +44,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Docker Compose Build
-      Id: build-image
+      id: build-image
       run: |
           echo ---Building images and starting up docker---
           {{docker build [image-url] or docker-compose -f \
