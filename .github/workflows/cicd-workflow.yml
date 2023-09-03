@@ -43,13 +43,13 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-   - name: Build docker images
-     Id: build-image
-     run: |
-       echo ---Building images and starting up docker---
-       {{docker build [image-url] or docker-compose -f \
-       [docker-compose file] up -d }}
-       echo ---Containers up—
+    - name: Docker Compose Build
+      Id: build-image
+      run: |
+          echo ---Building images and starting up docker---
+          {{docker build [image-url] or docker-compose -f \
+          [docker-compose file] up -d }}
+          echo ---Containers up—
 
     - name: Push to Docker Hub Container Registry
       run: |
