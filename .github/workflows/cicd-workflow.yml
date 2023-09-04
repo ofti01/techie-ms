@@ -18,7 +18,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image_name: ["discovery-service","inventory-sevice","orderservice","product-service"]
+        image_name: ["discovery-service","inventory-sevice","order-service","product-service"]
     runs-on: ubuntu-latest
 
     steps:
