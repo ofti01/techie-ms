@@ -34,7 +34,7 @@ jobs:
         cache: maven
 
     - name: Build Jar file
-      working-directory: ${{matrix.image_name}}
+      working-directory: ${{matrix.wrkdir_name}}
       run: mvn clean package -DskipTests
 
     - name: Build the Docker image
