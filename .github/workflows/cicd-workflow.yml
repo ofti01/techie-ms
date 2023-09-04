@@ -20,7 +20,8 @@ jobs:
   build:
     strategy:
       matrix:
-        image_name: ["discovery-service","inventory-sevice","order-service","product-service"]
+        wrkdir_name: ["discovery-service","inventory-sevice","order-service","product-service"]
+        images_name: ["discovery-service","inventory-sevice","order-service","product-service","mysql-order","mysql-inventory","mongodb"]
     runs-on: ubuntu-latest
 
     steps:
