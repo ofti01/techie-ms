@@ -6,7 +6,7 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 #copy the jar file to the container
-COPY target/*.jar app.jar
+COPY *.jar /app/app.jar
 
 # Set the command to run the JAR file
 CMD ["java", "-jar", "app.jar"]
